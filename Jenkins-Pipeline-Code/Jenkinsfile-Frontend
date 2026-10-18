@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git credentialsId: 'GITHUB', url: 'https://github.com/Spoorthi-p-m/Advanced-CICD-project-part-2.git'
+                git branch: 'main', credentialsId: 'GITHUB', url: 'https://github.com/Spoorthi-p-m/Advanced-CICD-project-part-2.git'
             }
         }
         stage('Sonarqube Analysis') {
